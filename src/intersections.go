@@ -13,7 +13,7 @@ func ray_tri_intersection(tri triangle, r ray) bool {
 	var f float64 = 1.0 / a
 	var s vec3 = r.origin.vadd(tri.vertex1.inv())
 	var u float64 = f * dot(s, h)
-	if u < 0.0 && u > 1.0 {
+	if u < 0.0 || u > 1.0 {
 		return false
 	}
 	q := cross(s, edge1)
