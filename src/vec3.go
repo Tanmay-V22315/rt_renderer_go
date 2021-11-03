@@ -55,7 +55,7 @@ func cross(v1 vec3, v2 vec3) vec3 {
 		v1.x()*v2.y() - v1.y()*v2.x()}}
 }
 
-//Vector that represents direction and drops the magnitude. Returns a vec3.
+//Vector that represents direction only and drops the magnitude. Returns a vec3.
 func (v vec3) unit_vector() vec3 {
 	return v.cmul(1 / v.length())
 }
